@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --format=esm",
+    "publish": "npm run build && wrangler publish"
   },
   "keywords": [],
   "author": "",
