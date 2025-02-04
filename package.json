@@ -6,7 +6,7 @@
   "scripts": {
     "build": "esbuild src/index.js --bundle --outfile=dist/index.js --format=esm",
     "dev": "wrangler dev src/index.js",
-    "publish": "npm run build && wrangler deploy src/index.js"
+    "publish": "npm run build && npx wrangler deploy src/index.js"
   },
   "keywords": [],
   "author": "",
