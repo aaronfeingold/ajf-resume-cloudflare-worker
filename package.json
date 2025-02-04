@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/index.js --bundle --outfile=dist/index.js --format=esm",
-    "publish": "npm run build && wrangler publish"
+    "dev": "wrangler dev src/index.js",
+    "publish": "npm run build && wrangler deploy src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "aws4fetch": "^1.0.20"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
     "esbuild": "^0.24.2",
     "typescript": "^5.7.2"
   }

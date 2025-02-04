@@ -26,5 +26,13 @@ wrangler login
 ```
 Publish the Worker to your Cloudflare account:
 ```
-npm run deploy
+npm run publish
+```
+
+## Env Vars
+- Secrets can be put to the worker with this command, examples:
+```
+wrangler secret put R2_ACCESS_KEY_ID
+wrangler secret put R2_SECRET_ACCESS_KEY
+wrangler secret put R2_ACCOUNT_ID
 ```

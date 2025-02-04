@@ -4,8 +4,9 @@ export default {
   async fetch(req, env) {
     // CORS headers
     const corsHeaders = {
-      "Access-Control-Allow-Origin": "https://aaron-feingold.com",
+      //   "Access-Control-Allow-Origin": "https://aaron-feingold.com",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Max-Age": "86400",
     };
 
@@ -21,6 +22,7 @@ export default {
         secretAccessKey: env.R2_SECRET_ACCESS_KEY,
         region: "auto", // R2 uses 'auto' as region
         service: "s3", // R2 is S3-compatible
+        signatureVersion: "v4", // Ensure SigV4 is used
       });
 
       // Construct the URL for your resume
