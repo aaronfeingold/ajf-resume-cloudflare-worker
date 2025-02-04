@@ -4,7 +4,7 @@ export default {
   async fetch(req, env) {
     // CORS headers
     const corsHeaders = {
-      //   "Access-Control-Allow-Origin": "https://aaron-feingold.com",
+      "Access-Control-Allow-Origin": "https://aaron-feingold.com",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Max-Age": "86400",
